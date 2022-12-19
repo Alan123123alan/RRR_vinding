@@ -1,0 +1,77 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <script type="text/javascript" src="index.html"></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title></title>
+</head>
+<body>
+    <div>
+    
+      </div>
+      <script src="home.html">
+        const temp=document.querySelector(".key");
+        document.write(temp)
+      </script>
+    
+        
+        
+    <form id="form">
+        <label for="username">Username</label>
+        <input type="text" name="" id="username" placeholder="Enter the Username">
+        <label for="password">Password</label>
+        <input type="password" name="" id="password" placeholder="Enter the Password">
+        <button>Submit</button>
+ 
+        <div id="result"></div>
+        <div id="count"></div>
+    </form>
+</body>
+<script>
+    let form = document.getElementById('form')
+    let array1=[1,2,0003,0004,0005,0006,0007,8,9,0010];
+    let array2=[-0001,-0002,-0003,-0004,-0005,-0006,-0007,-8,-9,-0010];
+    let score=0;
+    form.addEventListener('submit',(e) => {
+ 
+        e.preventDefault()
+ 
+        let username = document.getElementById('username').value
+ 
+        let password = document.getElementById('password').value
+ 
+        if(username == "" || password == ""){
+            alert("Please enter all the fields")
+        }
+        else{
+            if(password>0)
+            {
+            for(i=0;i<=9;i++)
+            {
+                if(array[i]==password){
+                    score +=10;
+                    delete array[i]
+                }
+            }
+            }
+            else
+            {for(i=0;i<=9;i++)
+            {
+                if(array[i]==password){
+                    score +=5;
+                    delete array[i]
+                }
+            }}
+            document.getElementById('result').innerHTML = `
+            <p>The Username is: ${username}</p>
+            <p>The Password is: ${password}</p>
+            <p>The score is: ${score}</p>
+            `
+        }
+        
+    })
+    </script>
+</html>

@@ -1,0 +1,93 @@
+  <!DOCTYOE html>
+        <html lang=""en">
+        <head>
+            
+        <meta charset=""UTF-8">
+        <meta http-equip=""X-UA-Compatible" content="IE=edge">
+        <meta name=""viewport" content="'width=device-width,initial-sacle=1.0">
+        <title>QR Code Scanner</title>
+        <script src="./node_modules/html5-qrcode/html5-qrcode.min.js"></script>
+        <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@200;400;600;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+        <style>
+            main {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+            }
+            #reader {
+                width: 600px;
+            }
+            #result {
+                text-align: center;
+                font-size: 1.5rem;
+            }
+        </style>
+        
+        <main>
+            <div id="reader"></div>
+            <div id="result"></div>
+        </main>
+        </head>
+        <body>
+            <nav>
+                <div class="logo">
+                    <a href="/home.html" class="main-heading">3R</a>                
+                </div>
+        
+        
+                
+                    
+                <form type="button" action="C:\Users\DELL\Desktop\project\index.html"></form>
+                
+                <button class="main-button signout" style="width: fit-content;" id="signOut">Sign Out</button></form>
+            </nav>
+            
+        <script>
+        
+            const scanner = new Html5QrcodeScanner('reader', { 
+                // Scanner will be initialized in DOM inside element with id of 'reader'
+                qrbox: {
+                    width: 250,
+                    height: 250,
+                },  // Sets dimensions of scanning box (set relative to reader element width)
+                fps: 20, // Frames per second to attempt a scan
+            });
+        
+            let score=0;
+            scanner.render(success, error);
+            // Starts scanner(itm)
+        
+            function success(result) {
+                var iitem=`${result}`;
+                document.getElementById('result').innerHTML = `
+                <h2 style="color:white;">Success!</h2>
+                <p><a href="coinadder.html">passward:${result}</a></p>
+                `;
+                
+        
+               
+              const item= document.querySelector(".key");
+              key.innerHTML = randomNum;
+               
+                // Prints result as a link inside result element
+        
+                scanner.clear();
+                // Clears scanning instance
+        
+                document.getElementById('reader').remove();
+                // Removes reader element from DOM since no longer needed
+            
+            }
+           
+           
+            function error(err) {
+                console.error(err);
+                
+                // Prints any errors to the console
+            }
+        
+        </script>
+        </body>
+        </html>
